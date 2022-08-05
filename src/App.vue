@@ -1,21 +1,26 @@
 <template>
-  <div class="App">
-        <header class="header">Movies of 2018 (Vue)</header>
-        <MovieList />
-  </div>
+  <router-view/>
 </template>
 
-<script>
-import MovieList from './components/MovieList.vue'
+<style lang="scss">
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
 
-export default {
-  name: 'app',
-  components: {
-    MovieList
+nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
   }
 }
-</script>
-
-<style>
-  @import './App.css';
 </style>
